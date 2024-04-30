@@ -44,7 +44,7 @@ def logout():
 
 
 @bp.route("/register", methods=['GET', 'POST'])
-#form registration
+# form registration
 def register():
     if request.method == 'GET':
         return render_template("regis.html")
