@@ -2,7 +2,7 @@
          ->auth.py: route to login/register page, send verification code
          ->Form.py: validate form input.
          ->Forum.py route to/ functions of forum page</n>
-Static: Bootstrap/jQuery/CSS files
+<br>Static: Bootstrap/jQuery/CSS files</br>
 templates: html files(Jinja)
 venv: Virtual Environment
 Instance:SQLite DBfile
