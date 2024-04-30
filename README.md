@@ -1,7 +1,7 @@
-Blueprint->_init_.py: empty file
+<n>Blueprint->_init_.py: empty file
          ->auth.py: route to login/register page, send verification code
          ->Form.py: validate form input.
-         ->Forum.py route to/ functions of forum page
+         ->Forum.py route to/ functions of forum page</n>
 Static: Bootstrap/jQuery/CSS files
 templates: html files(Jinja)
 venv: Virtual Environment
