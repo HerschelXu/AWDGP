@@ -4,6 +4,7 @@ from exts import db, mail
 from models import UserModel
 from blueprint.forum import bp as forum_bp
 from blueprint.auth import bp as auth_bp
+from blueprint.game import bp as game_bp
 from flask_migrate import Migrate
 
 
@@ -24,6 +25,7 @@ migrate = Migrate(app, db)
 
 app.register_blueprint(forum_bp)
 app.register_blueprint(auth_bp)
+app.register_blueprint(game_bp)
 
 
 @app.before_request
