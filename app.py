@@ -22,7 +22,6 @@ mail.init_app(app)
 
 migrate = Migrate(app, db)
 
-
 app.register_blueprint(forum_bp)
 app.register_blueprint(auth_bp)
 app.register_blueprint(game_bp)
@@ -45,6 +44,5 @@ def content_processor1():
     return {"user": g.user}
 
 
-
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
