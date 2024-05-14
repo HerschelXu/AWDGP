@@ -45,3 +45,14 @@ class ReplyModel(db.Model):
     # relations
     post = db.relationship(PostsModel, backref=db.backref('replies', order_by=create_time.desc()))
     author = db.relationship(UserModel, backref='replies')
+
+
+class GameRecordModel(db.Model):
+    __tablename__ = "game_records"
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    end_time = db.Column(db.Float, nullable=False)
+    create_time = db.Column(db.DateTime, default=datetime.now)
+
+    # Foreign Key
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    user = db.relationship(UserModel, backref="game_records")

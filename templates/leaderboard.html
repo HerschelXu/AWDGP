@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Parcel Delivery Game{% endblock %}
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='Game1/TemplateData/style.css') }}">
+{% endblock %}
+{% block body %}
+    <h1>Game Leaderboard</h1>
+    <ul>
+        {% for record in records %}
+        <li>{{ loop.index }}.{{ record.user.username }} - {{ record.end_time }} seconds </li>li>
+        {% endfor %}
+    </ul>
+{% endblock %}
