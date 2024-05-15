@@ -17,13 +17,13 @@ def game():
 @login_req
 def update_time():
     end_time = request.form.get('end_time')
-    print(end_time)
+    # print(end_time)
 
     if not end_time:
         return jsonify({'error': 'Missing data'}), 400
 
     user_id = session.get('user_id')
-    print(user_id)
+    # print(user_id)
 
     user = UserModel.query.get(user_id)
     if not user:
