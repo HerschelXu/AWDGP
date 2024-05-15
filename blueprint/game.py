@@ -1,8 +1,8 @@
-from flask import Blueprint, render_template, request, jsonify
-from datetime import datetime
+from flask import Blueprint, render_template, request, jsonify, session
 from decor import login_req
-from models import UserModel, GameRecordModel
+from models import GameRecordModel, UserModel
 from exts import db
+
 
 bp = Blueprint('game', __name__, url_prefix='/game')
 
@@ -16,11 +16,14 @@ def game():
 @bp.route('/update_time', methods=['POST'])
 @login_req
 def update_time():
-    user_id = request.json.get('user_id')
-    end_time = request.json.get('end_time')
+    end_time = request.form.get('end_time')
+    print(end_time)
 
-    if not user_id or not end_time:
+    if not end_time:
         return jsonify({'error': 'Missing data'}), 400
+
+    user_id = session.get('user_id')
+    print(user_id)
 
     user = UserModel.query.get(user_id)
     if not user:
