@@ -38,3 +38,9 @@
 3. Make your changes and commit them: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin feature/your-feature`
 5. Submit a pull request.
+
+
+## Acknowledgement
+
+- The game is made following the Unity2d game guide from Udemy: Complete C# Unity Game Developer 2D
+- The networking of the data from Unity WebGL is helped and implemented by ChatGPT.
