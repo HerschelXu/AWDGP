@@ -28,9 +28,11 @@
 - **exts.py**: Prevents reference loops.
 - **models.py**: Contains database models (ORM).
 
-## Function
+## Instruction
 - When host as a server, the server can generate random verification code and send to the registors.
+ - Users can register and login through the login/ registration page, most of the functions need to be login to use.
 - Users can post and reply posts to the froum (**BEWARE**:no censorship).
+ - All user activities can be checked in the database file.
 - Users can search post by using keywords.
 
 ## Usage
