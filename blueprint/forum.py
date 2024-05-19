@@ -8,6 +8,10 @@ bp = Blueprint("forum", __name__, url_prefix="/")
 
 
 @bp.route("/")
+def introduction():
+    return render_template("introduction.html")
+
+@bp.route("/forum")
 def index():
     posts = PostsModel.query.order_by(PostsModel.create_time.desc()).all()
     return render_template("index.html", posts=posts)
@@ -26,7 +30,7 @@ def publish_post():
             posts = PostsModel(title=title, content=content, author=g.user)
             db.session.add(posts)
             db.session.commit()
-            return redirect("/")
+            return redirect(url_for("forum.index"))
         else:
             print(form.errors)
             return redirect(url_for("forum.publish_post"))
@@ -61,6 +65,6 @@ def search():
     return render_template("index.html", posts=searches)
 
 @bp.route("/introduction")
-def introduction():
+def introduction_page():
 
     return render_template("introduction.html")
