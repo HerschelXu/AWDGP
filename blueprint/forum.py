@@ -59,3 +59,8 @@ def search():
     s = request.args.get("s")
     searches = PostsModel.query.filter(PostsModel.title.contains(s)).all()
     return render_template("index.html", posts=searches)
+
+@bp.route("/introduction")
+def introduction():
+
+    return render_template("introduction.html")
