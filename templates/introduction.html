@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Introduction{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='Game1/TemplateData/style.css') }}">
+<!-- Include Bootstrap CSS from CDN -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .centered-content {
+        margin: auto;
+        text-align: center;
+    }
+    .header-image {
+        width: 100%;
+        height: auto;
+    }
+    .card-body p {
+        font-size: 1.1em;
+    }
+    .btn-custom {
+        background-color: #007bff;
+        color: white;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<div class="container mt-5">
+    <h1 class="display-4 text-center">Introduction</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8 centered-content">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Welcome to Our Platform!</h5>
+                    <p>Explore various features and games designed to entertain and engage you. Learn more and get the most out of your experience.</p>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Join the Discussion</h5>
+                    <p>Our forum allows you to share your thoughts and engage in discussions with other users. Don't hesitate to join the conversation!</p>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Challenge Yourself</h5>
+                    <p>Check out our exciting games, including the Parcel Delivery Game, and see your name on the leaderboard. Compete and have fun!</p>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Need Help?</h5>
+                    <p>If you have any questions or need assistance, feel free to reach out to our support team. We're here to help you!</p>
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="{{ url_for('forum.index') }}" class="btn btn-custom btn-lg mx-2">Explore Forum</a>
+                <a href="{{ url_for('game.game') }}" class="btn btn-custom btn-lg mx-2">Play Games</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
