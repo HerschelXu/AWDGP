@@ -52,9 +52,14 @@
                     <p>If you have any questions or need assistance, feel free to reach out to our support team. We're here to help you!</p>
                 </div>
             </div>
-            <div class="mt-4">
+            <div class="d-flex justify-content-center mt-4">
                 <a href="{{ url_for('forum.index') }}" class="btn btn-custom btn-lg mx-2">Explore Forum</a>
                 <a href="{{ url_for('game.game') }}" class="btn btn-custom btn-lg mx-2">Play Games</a>
+            </div>
+            <div class="register-section mt-4">
+                <span class="register-text">Not registered yet?</span>
+                <a href="{{ url_for('auth.register') }}" class="btn btn-custom btn-lg">Register</a>
+            </div>
             </div>
         </div>
     </div>
