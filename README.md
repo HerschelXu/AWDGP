@@ -2,6 +2,14 @@
 
 - This is a Flask-based website that hosts a game where users can play and share their thoughts about the game. User's play time for accomplish the goal will be recorded by the server and will list 10 fastest records.
 
+# Team Members
+
+| UWA ID   | Name        | GitHub User |
+| -------- | ----------- | ----------- |
+| 23912137 | Ahmed Shadab | Shadab0708  |
+| 23750564 | Peter Wang   | WWH987      |
+| 24120279 | Huixian Xu   | HerschelXu  |
+
 ## Structure
 
 - **Blueprint**
