@@ -1,3 +1,5 @@
+write this note on Thursday
+
 # Flask Game Website
 
 - This is a Flask-based website that hosts a game where users can play and share their thoughts about the game. User's play time for accomplish the goal will be recorded by the server and will list 10 fastest records.
